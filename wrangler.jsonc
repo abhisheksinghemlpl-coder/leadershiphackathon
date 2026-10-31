@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers (multi-file) config. Deploy with:  npx wrangler deploy
+  // For the single-file version see cloudflare-single/.
+  "name": "leadership-hackathon",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "html_handling": "auto-trailing-slash", "not_found_handling": "none" },
+  "durable_objects": { "bindings": [{ "name": "GAME", "class_name": "GameRoom" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }]
+  // Admin password: npx wrangler secret put ADMIN_PASSWORD   (default admin123)
+}

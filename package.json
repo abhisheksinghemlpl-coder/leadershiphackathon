@@ -1,0 +1,17 @@
+{
+  "name": "leadership-hackathon",
+  "version": "1.0.0",
+  "description": "The Leadership Hackathon — 3-round live digital event: Case Pitch, Tower Under Pressure, Escape Room.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "fresh": "RESUME=0 node server.js",
+    "cf:dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build:single": "node build-single.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2", "ws": "^8.18.0" },
+  "devDependencies": { "wrangler": "^4.0.0", "esbuild": "^0.25.0" }
+}
